@@ -165,6 +165,7 @@ function keyPressed(){
        
         noFill(); //No fill for outlines   
         //Curve from Nose To Rail Right
+        //    (Anchor 1 x+y, Control pt 1   x           y                 , Coontrol pt 2   x            y               ,Anchor 2 x +y);                              
         bezier(xNose,yNose,((xRailR+xNose)/2)+curv,((yRailR+yNose)/2)+curv,((xRailR+xNose)/2)+curv,((yRailR+yNose)/2)+curv,xRailR,yRailR);  
         //Curve From Rail Right to Tail Right 
         bezier(xRailR,yRailR,((xRailR+xTailR)/2)+curv,((yRailR+yTailR)/2)+curv,((xRailR+xTailR)/2)+curv,((yRailR+yTailR)/2)+curv,xTailR,yTailR); 
