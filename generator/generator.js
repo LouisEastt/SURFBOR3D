@@ -469,7 +469,6 @@ function keyPressed(){
         textAlign(LEFT,CENTER);
         textFont(goshaL);
         text('2020',75,25);
-        text('(ARCHIVE)',(windowWidth-80),windowHeight-25);
 
   
         //Outer Arrow Inform
@@ -495,7 +494,7 @@ function keyPressed(){
 }
 
 
-function mouseClicked(){
+function touchEnded(){
       //*CLICK*
       //ARCHIVE
       //Print
@@ -522,7 +521,7 @@ function mouseClicked(){
       textSize(infoType);
       textFont(goshaR);
       textAlign(LEFT,CENTER);
-      text('SURFBOR3D is a set of generative surf craft systems, physically',infoX,infoY);
+      text('"SURFBOR3D" is a set of generative surf craft systems, physically',infoX,infoY);
       text('translated by a human collaborator. SURFBOR3D seeks to discover',infoX,infoY+infoType*1.05);
       text('alternative relationships with the ocean by re-evaluating existing',infoX,infoY+(infoType*2)*1.05);
       text('surfboards; assessing craft forms, materiality and construction',infoX,infoY+(infoType*3)*1.05);
@@ -548,12 +547,10 @@ function mouseClicked(){
       
       pop();
   }
-}
+
 
 
 //MousePressed for Touch 
-function touchEnded(){
-
 //*CLICK*
 //Surfboard Generator 01
 //LEFT
@@ -911,5 +908,4 @@ function touchEnded(){
         //I'm still learning..and that's okay?
         //Thanks for looking through!
         //LE
- 
  
