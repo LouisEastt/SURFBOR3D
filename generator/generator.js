@@ -36,6 +36,7 @@ function setup() {
   textFont(goshaL);
   textAlign(RIGHT,CENTER);
   text('INFO',(windowWidth-80),25);
+  text('(ARCHIVE)',(windowWidth-80),windowHeight-25);
   textAlign(LEFT,CENTER);
   textFont(goshaL);
   text('Press \'S\' to SAVE',80,25);
@@ -79,6 +80,7 @@ function windowResized() {
         textFont(goshaL);
         textAlign(RIGHT,CENTER);
         text('INFO',(windowWidth-80),25);
+        text('(ARCHIVE)',(windowWidth-80),windowHeight-25);
         textAlign(LEFT,CENTER);
         textFont(goshaL);
         text('Press \'S\' to SAVE',80,25);
@@ -117,6 +119,7 @@ function keyPressed(){
         textFont(goshaL);
         textAlign(RIGHT,CENTER);
         text('INFO',(windowWidth-80),25);
+        text('(ARCHIVE)',(windowWidth-80),windowHeight-25);
         textAlign(LEFT,CENTER);
         textFont(goshaL);
         text('Press \'S\' to SAVE',80,25);
@@ -165,7 +168,6 @@ function keyPressed(){
        
         noFill(); //No fill for outlines   
         //Curve from Nose To Rail Right
-        //    (Anchor 1 x+y, Control pt 1   x           y                 , Coontrol pt 2   x            y               ,Anchor 2 x +y);                              
         bezier(xNose,yNose,((xRailR+xNose)/2)+curv,((yRailR+yNose)/2)+curv,((xRailR+xNose)/2)+curv,((yRailR+yNose)/2)+curv,xRailR,yRailR);  
         //Curve From Rail Right to Tail Right 
         bezier(xRailR,yRailR,((xRailR+xTailR)/2)+curv,((yRailR+yTailR)/2)+curv,((xRailR+xTailR)/2)+curv,((yRailR+yTailR)/2)+curv,xTailR,yTailR); 
@@ -195,6 +197,7 @@ function keyPressed(){
         textFont(goshaL);
         textAlign(RIGHT,CENTER);
         text('INFO',(windowWidth-80),25);
+        text('(ARCHIVE)',(windowWidth-80),windowHeight-25);
         textAlign(LEFT,CENTER);
         textFont(goshaL);
         text('Press \'S\' to SAVE',80,25);
@@ -282,6 +285,7 @@ function keyPressed(){
           textFont(goshaL);
           textAlign(RIGHT,CENTER);
           text('INFO',(windowWidth-80),25);
+          text('(ARCHIVE)',(windowWidth-80),windowHeight-25);
           textAlign(LEFT,CENTER);
           textFont(goshaL);
           text('Press \'S\' to SAVE',80,25);
@@ -360,6 +364,7 @@ function keyPressed(){
             textFont(goshaL);
             textAlign(RIGHT,CENTER);
             text('INFO',(windowWidth-80),25);
+            text('(ARCHIVE)',(windowWidth-80),windowHeight-25);
             textAlign(LEFT,CENTER);
             textFont(goshaL);
             text('Press \'S\' to SAVE',80,25);
@@ -464,6 +469,8 @@ function keyPressed(){
         textAlign(LEFT,CENTER);
         textFont(goshaL);
         text('2020',75,25);
+        text('(ARCHIVE)',(windowWidth-80),windowHeight-25);
+
   
         //Outer Arrow Inform
         textFont(goshaR);
@@ -488,10 +495,19 @@ function keyPressed(){
 }
 
 
-//INFO
-//Print
 function mouseClicked(){
+      //*CLICK*
+      //ARCHIVE
+      //Print
+      //Show Archive if clicked in zone
+      if (mouseX>(windowWidth/6)*4 && mouseX<(windowWidth-25) && mouseY>(windowHeight-100)){
+
+      window.open("https://louiseastt.github.io/SURFBOR3D/archive/");
       
+     }
+    
+//INFO
+//Print     
       //Show INFO if clicked in zone
       if (mouseX>(windowWidth/6)*4 && mouseX<(windowWidth-25) && mouseY<100){
        
@@ -506,7 +522,7 @@ function mouseClicked(){
       textSize(infoType);
       textFont(goshaR);
       textAlign(LEFT,CENTER);
-      text('SURFBOR3D is a set of generative surf craft systems, physically',infoX,infoY);
+      text('"SURFBOR3D" is a set of generative surf craft systems, physically',infoX,infoY);
       text('translated by a human collaborator. SURFBOR3D seeks to discover',infoX,infoY+infoType*1.05);
       text('alternative relationships with the ocean by re-evaluating existing',infoX,infoY+(infoType*2)*1.05);
       text('surfboards; assessing craft forms, materiality and construction',infoX,infoY+(infoType*3)*1.05);
@@ -527,6 +543,8 @@ function mouseClicked(){
       textFont(goshaL);
       textAlign(RIGHT,CENTER);
       text('Press any arrow to Exit',(windowWidth-80),25);
+      text('(ARCHIVE)',(windowWidth-80),windowHeight-25);
+
       
       pop();
   }
@@ -553,6 +571,7 @@ function touchEnded(){
     textFont(goshaL);
     textAlign(RIGHT,CENTER);     
     text('INFO',(windowWidth-80),25);
+    text('(ARCHIVE)',(windowWidth-80),windowHeight-25);
     textAlign(LEFT,CENTER);
     textFont(goshaL);          
     text('Press \'S\' to SAVE',80,25);
@@ -631,6 +650,7 @@ function touchEnded(){
         textFont(goshaL);
         textAlign(RIGHT,CENTER);
         text('INFO',(windowWidth-80),25);
+        text('(ARCHIVE)',(windowWidth-80),windowHeight-25);
         textAlign(LEFT,CENTER);
         textFont(goshaL);
         text('Press \'S\' to SAVE',80,25);
@@ -722,6 +742,7 @@ function touchEnded(){
         textFont(goshaL);
         textAlign(RIGHT,CENTER);
         text('INFO',(windowWidth-80),25);
+        text('(ARCHIVE)',(windowWidth-80),windowHeight-25);
         textAlign(LEFT,CENTER);
         textFont(goshaL);
         text('Press \'S\' to SAVE',80,25);
@@ -789,7 +810,7 @@ function touchEnded(){
 //(Orange)
   
   //If clicked in "DOWN" zone
-  if (mouseX>((windowWidth/6)*2) && mouseX>((windowHeight/6)*4) && mouseY>((windowHeight/6)*4)){
+  if (mouseX>((windowWidth/6)*2) && mouseX<((windowWidth/6)*4) && mouseY>((windowHeight/6)*4)){
    
         push();
     
@@ -800,6 +821,7 @@ function touchEnded(){
         textFont(goshaL);
         textAlign(RIGHT,CENTER);
         text('INFO',(windowWidth-80),25);
+        text('(ARCHIVE)',(windowWidth-80),windowHeight-25);
         textAlign(LEFT,CENTER);
         textFont(goshaL);
         text('Press \'S\' to SAVE',80,25);
@@ -889,4 +911,5 @@ function touchEnded(){
         //I'm still learning..and that's okay?
         //Thanks for looking through!
         //LE
+ 
  
